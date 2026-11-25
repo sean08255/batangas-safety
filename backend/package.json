@@ -1,0 +1,17 @@
+{
+  "name": "batangas-alerts-backend",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy",
+    "test": "node --experimental-strip-types src/parse.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261123.1",
+    "typescript": "~5.6.0",
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+# Reads the Taal alert level from PHIVOLCS and sends it to our backend.
+# Needs two repository secrets: BACKEND_URL and INGEST_SECRET.
+name: Check Taal alert level
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  taal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # The PHIVOLCS bulletin site forgets to send this intermediate certificate.
+      # We add it ourselves, so the connection is still fully verified (nothing is skipped).
+      - name: Get the missing GlobalSign certificate
+        run: |
+          curl -fsS http://secure.globalsign.com/cacert/gsgccr46ovtlsca2025.crt -o gs.der
+          openssl x509 -inform der -in gs.der -out "$RUNNER_TEMP/gs.pem"
+
+      - name: Read Taal level and send it
+        working-directory: backend
+        env:
+          NODE_EXTRA_CA_CERTS: ${{ runner.temp }}/gs.pem
+          BACKEND_URL: ${{ secrets.BACKEND_URL }}
+          INGEST_SECRET: ${{ secrets.INGEST_SECRET }}
+        run: node scripts/send-taal.ts

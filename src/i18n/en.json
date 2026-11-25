@@ -1,0 +1,119 @@
+{
+  "app": {
+    "name": "Batangas Safety Companion"
+  },
+  "common": {
+    "disclaimer": "This app is an information aid. It is not an official warning system. Always follow instructions from local authorities."
+  },
+  "welcome": {
+    "title": "Stay informed in Batangas",
+    "why": "We ask for your location so we can show alerts and emergency info for where you are.",
+    "privacy": "No account needed. We use your location only to find your town.",
+    "button": "Continue",
+    "manual": "Choose my town manually"
+  },
+  "locating": {
+    "title": "Finding your town...",
+    "body": "This can take a few seconds. Please keep the app open."
+  },
+  "result": {
+    "welcomeTo": "Welcome to {{town}}",
+    "detected": "Found using your phone's location.",
+    "chosen": "You chose this town.",
+    "notCoveredNote": "Emergency info for this town is still being added. Call 911 in an emergency.",
+    "coveredNote": "This town is one of our pilot towns.",
+    "changeTown": "Change town",
+    "tryGps": "Use my location again"
+  },
+  "picker": {
+    "title": "Choose your town",
+    "search": "Search towns",
+    "noResults": "No town matches your search.",
+    "covered": "Pilot town",
+    "comingSoon": "Coming soon",
+    "openSettings": "Open phone settings",
+    "reasonDenied": "Location permission is off, so we can't find your town automatically. Please choose it from the list, or turn on location in your phone settings.",
+    "reasonUnavailable": "We couldn't get your location. Check that GPS is on, or choose your town from the list.",
+    "reasonNotCoveredTitle": "Not fully covered yet",
+    "reasonNotCovered": "We found you in {{place}}, but we don't have full info for this area yet. You can pick another town from the list.",
+    "reasonOutside": "You seem to be outside Batangas province, so we can't show local info for you. You can pick a town from the list.",
+    "reasonManual": "Pick the town you are in or visiting."
+  },
+  "nav": {
+    "back": "Back"
+  },
+  "home": {
+    "quick": "Quick access",
+    "emergency": "Emergency",
+    "weather": "Weather",
+    "guide": "Guide",
+    "comingSoon": "Coming soon",
+    "settings": "Settings"
+  },
+  "alerts": {
+    "title": "Safety alerts",
+    "loading": "Checking official sources...",
+    "retry": "Check again",
+    "openOfficial": "Open official page",
+    "source": "Source: {{source}}",
+    "updated": "Last updated: {{time}} (Philippine time)",
+    "bulletin": "Latest PHIVOLCS bulletin: {{date}}",
+    "unavailableTitle": "Unable to check alerts",
+    "unavailableBody": "We could not get current alert information. Please check the official sources directly. Do not assume there is no warning.",
+    "unavailableShort": "Unable to check this right now. Please open the official page.",
+    "phivolcs": "PHIVOLCS (volcano)",
+    "pagasa": "PAGASA (weather)",
+    "taal": {
+      "title": "Taal Volcano",
+      "level": "Alert Level {{level}}",
+      "unverified": "Unverified reading. Please open the official page.",
+      "l0": "Normal",
+      "l1": "Abnormal. Do not enter the Taal Volcano Island.",
+      "l2": "Increased unrest",
+      "l3": "Magmatic unrest",
+      "l4": "Hazardous eruption is imminent",
+      "l5": "Hazardous eruption is underway"
+    },
+    "rain": {
+      "title": "Rain warnings",
+      "none": "No heavy rainfall warning was listed by PAGASA at the last check.",
+      "check": "PAGASA may have a rain, thunderstorm or weather warning. Open the official page to read it."
+    },
+    "typhoon": {
+      "title": "Typhoon / tropical cyclone",
+      "none": "PAGASA lists no active tropical cyclone in the Philippine area at the last check.",
+      "check": "PAGASA may be tracking a tropical cyclone. Open the official page to read it."
+    }
+  },
+  "emergency": {
+    "title": "Emergency info",
+    "call911": "Call 911",
+    "call911Hint": "For police, fire or medical emergencies",
+    "offlineNote": "Phone calls work without internet. Maps need internet.",
+    "draftNote": "First draft from public sources. Every entry marked Unverified must be confirmed before you rely on it.",
+    "townNotReady": "Detailed info for {{town}} is still being added. National numbers and embassies are below.",
+    "national": "National numbers",
+    "hospitals": "Hospitals",
+    "police": "Police",
+    "fire": "Fire",
+    "mdrrmo": "Local disaster office (MDRRMO)",
+    "embassies": "Embassies for foreigners",
+    "embassyNote": "Your embassy not listed? Contact it directly.",
+    "call": "Call",
+    "map": "Map",
+    "noPhone": "No phone number yet",
+    "noAddress": "Address not added yet",
+    "unverified": "Unverified",
+    "verifiedOn": "Verified {{date}}",
+    "source": "Source: {{source}}"
+  },
+  "settings": {
+    "title": "Settings",
+    "currentTown": "Current town",
+    "changeTown": "Change town",
+    "useGps": "Use my location",
+    "about": "About this app",
+    "aboutText": "Research prototype for testing. It is not published on any app store.",
+    "dataNote": "Emergency data is a first draft. Entries stay marked Unverified until someone checks them."
+  }
+}

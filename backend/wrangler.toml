@@ -1,0 +1,13 @@
+name = "batangas-alerts"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Run the fetch job every 15 minutes
+[triggers]
+crons = ["*/15 * * * *"]
+
+# Storage for the latest alert data.
+# After `wrangler kv namespace create ALERTS`, paste the id it prints below.
+[[kv_namespaces]]
+binding = "ALERTS"
+id = "a973b36d2e214775ad2cd1ce2ff4c239"
