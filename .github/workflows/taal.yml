@@ -1,6 +1,7 @@
 # Reads the Taal alert level from PHIVOLCS and sends it to our backend.
 # Needs two repository secrets: BACKEND_URL and INGEST_SECRET.
 name: Check Taal alert level
+run-name: Check Taal alert level (${{ github.event_name }})
 
 on:
   schedule:
